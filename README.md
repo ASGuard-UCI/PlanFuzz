@@ -1,4 +1,4 @@
-# PlanFuzz_private
+# PlanFuzz
 
 PlanFuzz is a novel dynamic testing tool to automatically discover semantic DoS vulnerabilities in Autonomous Driving (AD) behavioral planning. Semantic DoS vulnerability refers to the vulnerabilities inside AD planning which can be exploited by external attacker and lead to overly-conservative decisions.
 

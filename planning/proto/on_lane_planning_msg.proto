@@ -1,0 +1,19 @@
+syntax = "proto2";
+import "modules/canbus/proto/chassis.proto";
+import "modules/localization/proto/localization.proto";
+import "modules/routing/proto/routing.proto";
+import "modules/perception/proto/traffic_light_detection.proto";
+import "modules/prediction/proto/prediction_obstacle.proto";
+
+package apollo.tools.fuzz.planning;
+
+
+message OnLanePlanningFuzzMessage{
+  required apollo.canbus.Chassis chassis = 1;
+  required apollo.localization.LocalizationEstimate localization_estimate = 2;
+  required apollo.prediction.PredictionObstacles prediction_obstacles = 3;
+  required apollo.routing.RoutingResponse routing_response = 4;
+  optional apollo.perception.TrafficLightDetection traffic_light_detection = 5;
+
+}
+

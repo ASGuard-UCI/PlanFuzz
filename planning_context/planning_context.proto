@@ -1,0 +1,25 @@
+syntax = "proto2";
+
+import "modules/planning/proto/path_decider_info.proto";
+import "modules/planning/proto/planning_status.proto";
+//import "modules/planning/proto/path_decider_info.proto";
+
+package apollo.tools.fuzz.planning;
+
+message OpenSpaceInfoPb{
+  repeated string index_history = 1;
+}
+
+
+message FallBackInfoPb{
+  required string path_label=1;
+}
+
+
+message PlanningContextPb{
+  required apollo.planning.PlanningStatus planning_status=1;
+  required apollo.planning.PathDeciderInfo path_decider_info=2;
+  optional OpenSpaceInfoPb open_space_info=3;
+  optional FallBackInfoPb fall_back_info=4;
+
+}
